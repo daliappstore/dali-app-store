@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dali App Store</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #101217 0%, #181c24 60%, #050608 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #d0d4db;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(10, 12, 18, 0.98);
+            border-radius: 22px;
+            padding: 48px 36px 40px 36px;
+            max-width: 520px;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 rgba(0,0,0,0.55);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.7em;
+            margin-bottom: 22px;
+            letter-spacing: 2.5px;
+            background: linear-gradient(90deg, #17aad6 10%, #1e90ff 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-shadow: 2px 4px 24px #000c;
+        }
+        p {
+            font-size: 1.18em;
+            margin-bottom: 34px;
+            line-height: 1.8;
+            color: #a7b0bb;
+        }
+        .continue-btn {
+            display: inline-block;
+            padding: 18px 44px;
+            background: linear-gradient(90deg, #0a2233 0%, #1e90ff 100%);
+            color: #fff;
+            font-size: 1.18em;
+            border: none;
+            border-radius: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 18px 0 rgba(23,138,214,0.18);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+        }
+        .continue-btn:hover {
+            background: linear-gradient(90deg, #1e90ff 0%, #0a2233 100%);
+            transform: scale(1.06);
+            box-shadow: 0 8px 32px 0 rgba(30,144,255,0.18);
+        }
+        @media (max-width: 600px) {
+            .container { padding: 24px 8px; max-width: 98vw; }
+            h1 { font-size: 1.5em; }
+            p { font-size: 1em; }
+            .continue-btn { width: 90%; font-size: 1em; padding: 14px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Dali App Store Logo" style="width: 110px; margin-bottom: 24px;">
+        <h1>Welcome to Dali App Store</h1>
+        <p>
+            Your one-stop destination for discovering the best apps, games, and digital tools — all in one place.<br><br>
+            Whether you're looking for powerful productivity apps, immersive games, or everyday utilities, Dali App Store brings you a selection of content tailored to your needs.<br><br>
+            <strong style="color:#1e90ff;">Fast downloads. Trusted sources. Easy access.</strong><br>
+            Discover the future of digital convenience — only at Dali.
+        </p>
+        <a href="index1.html" class="continue-btn">Continue</a>
+    </div>
+</body>
+</html>
