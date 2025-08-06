@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://daliappstore.github.io/dali-app-store/</loc>
@@ -27,6 +25,7 @@
   <lastmod>2025-08-05T17:22:43+00:00</lastmod>
   <priority>0.51</priority>
 </url>
+
 
 
 </urlset>
