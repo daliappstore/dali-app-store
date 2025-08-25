@@ -116,7 +116,6 @@
       transition: background 0.3s, transform 0.2s;
     }
 
-    /* 🔹 Responsive Adjustments */
     @media (max-width: 768px) {
       .title {
         font-size: 1.8em;
@@ -172,11 +171,22 @@
   width: 100%;
   height: 100%;
 }
+      .logo {
+  max-width: 160px;   /* الحجم الأقصى */
+  width: 100%;        /* يخلي الصورة تصغر وحدها */
+  height: auto;       /* يحافظ على الشكل الأصلي */
+  margin-bottom: 24px;
+}
+      @media (max-width: 600px) {
+  .logo {
+    max-width: 120px; /* في الموبايل نصغرها شوية */
+  }
+}
 
   </style>
 </head>
 <body>
-  <div class="logo-container">
+  <div class="logo">
     <a href="index.html">
       <img src="logo.png" alt="Dali App Store Logo">
     </a>
@@ -244,4 +254,5 @@
   </div>
 </body>
 </html>
+
 
