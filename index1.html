@@ -1,184 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Downloading Blur Here Free</title>
-  <style>
-    body {
-      background-image: url("blur.jfif"); 
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Blur Free</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .logo-container {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 10;
-    }
-    .logo-container img {
-      height: 70px;
-      transition: transform 0.2s ease;
-    }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('blur.jfif') center/cover no-repeat;
+    color: #f0f0f0;
+    min-height: 100vh;
+  }
 
-    .top-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      display: block;
-      margin-bottom: 30px;
-    }
+  .logo-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+  }
+  .logo-container img {
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  .logo-container img:hover { transform: scale(1.1); }
 
-    h1 {
-      text-align: center;
-      color: #17aad6;
-      font-size: 56px;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin-top: 40px;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 8px #000;
-    }
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 20px 50px 20px;
+    text-align: center;
+  }
 
-    h2 {
-      font-size: 32px;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #82b312;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 6px #222;
-      text-align: center;
-    }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    color: #00d4ff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    margin-bottom: 30px;
+  }
 
-    .intro, p, li, td {
-      font-size: 22px;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #180404;
-      line-height: 1.7;
-      text-align: center;
-    }
+  h2 {
+    font-size: 32px;
+    color: #ffdd59;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+    margin: 40px 0 20px 0;
+  }
 
-    ul {
-      background: rgba(23, 138, 214, 0.13);
-      border-radius: 12px;
-      padding: 18px 30px;
-      margin: 18px auto;
-      max-width: 600px;
-      box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
-    }
-    li {
-      margin-bottom: 10px;
-      text-align: left;
-    }
+  .intro, li {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
 
-    img.screenshot {
-      display: block;
-      margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-      max-width: 90%;
-    }
+  ul {
+    list-style-type: disc;
+    padding: 20px 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+  }
 
-    video {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-    }
+  li { text-align: left; margin-bottom: 10px; }
 
-    .download-btn {
-      display: block;
-      width: 260px;
-      margin: 30px auto 0 auto;
-      padding: 18px 0;
-      background: linear-gradient(90deg, #17aad6 0%, #82b312 100%);
-      color: #fff;
-      font-size: 1.3em;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 20px 0 rgba(23,138,214,0.25);
-      transition: background 0.3s, transform 0.2s;
-    }
-    .download-btn:hover {
-      background: linear-gradient(90deg, #82b312 0%, #17aad6 100%);
-      transform: scale(1.05);
-    }
+  .top-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+  }
 
-    .mini-btn {
-      display: block;
-      padding: 10px 20px;
-      background: linear-gradient(90deg, #17aad6 0%, #1e90ff 100%);
-      color: #fff;
-      font-size: 1em;
-      border-radius: 18px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 2px 8px rgba(23,138,214,0.18);
-      transition: background 0.3s, transform 0.2s;
-      margin: 20px auto;
-      text-align: center;
-      max-width: 260px;
-    }
-    .mini-btn:hover {
-      background: linear-gradient(90deg, #1e90ff 0%, #17aad6 100%);
-      transform: scale(1.05);
-    }
+  .screenshot {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+  .screenshot:hover { transform: scale(1.03); }
 
-    .footer {
-      margin-top: 50px;
-      text-align: center;
-      color: #bbb;
-      font-size: 1em;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 4px #000;
-    }
+  video {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+  }
 
-    .size {
-      font-size: 1.2em;
-      color: #d0d4db;
-      text-align: center;
-      margin-top: 20px;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
+  .download-btn, .mini-btn {
+    display: inline-block;
+    margin: 30px auto 0 auto;
+    padding: 18px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  }
 
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      h1 { font-size: 32px; }
-      h2 { font-size: 22px; }
-      .intro, p, li, td { font-size: 16px; }
-      ul { padding: 10px 8px; }
-      .download-btn { width: 90%; font-size: 1em; }
-      .mini-btn { width: 90%; }
-    }
-  </style>
+  .download-btn {
+    background: linear-gradient(90deg, #00d4ff, #ffdd59);
+    color: #000;
+    font-size: 1.3em;
+  }
+  .download-btn:hover {
+    background: linear-gradient(90deg, #ffdd59, #00d4ff);
+    transform: scale(1.05);
+  }
+
+  .mini-btn {
+    background: linear-gradient(90deg, #ff6f91, #845ec2);
+    color: #fff;
+    font-size: 1em;
+  }
+  .mini-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #845ec2, #ff6f91);
+  }
+
+  .size {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-top: 15px;
+  }
+
+  .footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #ccc;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    .intro, li { font-size: 16px; }
+    .download-btn, .mini-btn { width: 90%; }
+  }
+</style>
 </head>
 <body>
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="logo.png" alt="Dali App Store Logo">
-    </a>
-  </div>
+<div class="logo-container">
+  <a href="index.html"><img src="logo.png" alt="Dali App Store Logo"></a>
+</div>
 
+<div class="container">
   <img src="blur.jfif" alt="Blur Game Main Image" class="top-image">
 
-  <h1>Downloading Blur Free: No Virus, No Hacking</h1>
+  <h1>Download Blur Free: No Virus, No Hacking</h1>
 
-  <h2>1-Introduction</h2>
+  <h2>1 - Introduction</h2>
   <p class="intro">
-    Blur isn’t just a racing game — it’s a full-throttle street war on wheels.<br><br>
-    Get behind the wheel of real-world cars and tear through stunning cityscapes...
+    Blur isn’t just a racing game — it’s a full-throttle street war on wheels.<br>
+    Get behind the wheel of real-world cars and tear through stunning cityscapes.
   </p>
 
   <ul>
@@ -194,14 +178,14 @@
     <img src="game3.jfif" alt="Blur Screenshot 3" class="screenshot">
   </div>
 
-  <h2>2-How to Download Blur Free</h2>
-  <p class="intro">Very simple:</p>
+  <h2>2 - How to Download Blur Free</h2>
+  <p class="intro">Simple steps:</p>
   <ul>
     <li>Click on the download button below.</li>
     <li>Download the file.</li>
     <li>Open the ISO file.</li>
-    <li>Run the setup file and follow the instructions.</li>
-    <li>Enjoy racing without any viruses!</li>
+    <li>Run the setup and follow instructions.</li>
+    <li>Enjoy racing safely!</li>
   </ul>
 
   <video src="2025-08-06 11-54-38.mkv" controls></video>
@@ -212,5 +196,6 @@
   <a href="index2.html" class="mini-btn">Click here to Download more Games →</a>
 
   <div class="footer">&copy; Dali App Store</div>
+</div>
 </body>
 </html>
