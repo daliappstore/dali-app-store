@@ -153,7 +153,26 @@
         font-size: 1em;
         padding: 12px;
       }
-    }
+
+    
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
   </style>
 </head>
 <body>
@@ -196,7 +215,9 @@
       <li>Enjoy the game—virus free!</li>
     </ul>
 
-    <video src="2025-08-06 11-52-57.mkv" controls></video>
+   <div class="video-container">
+  <video src="2025-08-06 11-52-57.mkv" controls></video>
+</div>
 
     <a href="https://archive.org/details/gta-san-andreas-pc_202204" class="download-btn">Download GTA San Andreas Now</a>
 
@@ -209,7 +230,9 @@
       <li>Agree to replace.</li>
     </ul>
 
-    <video src="2025-08-06 15-55-33.mp4" controls></video>
+   <div class="video-container">
+  <video src="2025-08-06 15-55-33.mp4" controls></video>
+</div>
     <a href="the file runer.zip" download class="download-btn">Click here to Download this file</a>
 
     <div class="footer">&copy; 2025 Dali App Store.</div>
@@ -221,3 +244,4 @@
   </div>
 </body>
 </html>
+
