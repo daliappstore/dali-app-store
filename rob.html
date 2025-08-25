@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Roblox</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             background-image: url("rob back.jpg");
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .logo-container {
             text-align: left; 
-            padding: 30px 0 10px 0;
+            padding: 20px 0 10px 20px;
         }
         .logo-container img {
             height: 80px;
             transition: transform 0.2s ease;
+            max-width: 100%;
         }
         .logo-container img:hover {
             transform: scale(1.05);
@@ -32,9 +43,9 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-size: 2.7em;
-            margin-top: 40px;
+            margin-top: 20px;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 8px rgb(255, 255, 255);
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7);
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -42,21 +53,30 @@
             background: rgba(255, 255, 255, 0.85); 
             backdrop-filter: blur(10px); 
             max-width: 850px;
-            margin: 40px auto;
-            padding: 40px 30px;
+            width: 90%;
+            margin: 20px auto;
+            padding: 30px;
             border-radius: 18px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            flex: 1;
         }
 
         p, ul {
             color: #000000;
             font-size: 22px;
         }
+        
         ul {
             margin-left: 20px;
+            padding-left: 20px;
         }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
         h2, h3, h4 {
-            color: #8f8f8f70;
+            color: #4a4a4a;
             font-size: 27px;
             margin-top: 25px;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -65,9 +85,10 @@
         .download-btn {
             display: block;
             width: 300px;
+            max-width: 100%;
             margin: 30px auto;
             padding: 18px 0;
-            background: linear-gradient(90deg, #66686eab 0%, #3b3e3fce 100%);
+            background: linear-gradient(90deg, #66686e 0%, #3b3e3f 100%);
             color: #fff;
             text-align: center;
             text-decoration: none;
@@ -75,7 +96,9 @@
             border-radius: 8px;
             box-shadow: 0 2px 12px rgba(105, 107, 112, 0.6);
             font-weight: bold;
+            transition: all 0.3s ease;
         }
+        
         .download-btn:hover {
             background: linear-gradient(90deg, #797a7c 0%, #505455 100%);
             transform: scale(1.05);
@@ -84,15 +107,14 @@
         .footer {
             margin-top: 50px;
             text-align: center;
-            color: #bbb;
+            color: #666;
             font-size: 1em;
             letter-spacing: 1px;
-            text-shadow: 1px 1px 4px #000;
         }
 
         .mini-btn, .mini-btn2 {
             display: inline-block;
-            padding: 8px 22px;
+            padding: 12px 25px;
             background: linear-gradient(90deg, #17aad6 0%, #1e90ff 100%);
             color: #fff;
             font-size: 0.95em;
@@ -102,8 +124,102 @@
             text-decoration: none;
             font-weight: 600;
             box-shadow: 0 2px 8px 0 rgba(23,138,214,0.18);
-            transition: background 0.3s, transform 0.2s;
-            margin: 0 10px;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .mini-btn:hover, .mini-btn2:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px 0 rgba(23,138,214,0.3);
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 0 15px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .title {
+                font-size: 2.3em;
+            }
+            p, ul {
+                font-size: 20px;
+            }
+            h2, h3, h4 {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                text-align: center;
+                padding: 15px 0;
+            }
+            .title {
+                font-size: 2em;
+                margin-top: 10px;
+            }
+            .content-box {
+                padding: 25px 20px;
+                width: 95%;
+            }
+            p, ul {
+                font-size: 18px;
+            }
+            h2, h3, h4 {
+                font-size: 22px;
+            }
+            ul {
+                margin-left: 15px;
+                padding-left: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .title {
+                font-size: 1.7em;
+            }
+            .content-box {
+                padding: 20px 15px;
+                margin: 15px auto;
+            }
+            p, ul {
+                font-size: 16px;
+            }
+            h2, h3, h4 {
+                font-size: 20px;
+            }
+            .download-btn {
+                width: 250px;
+                padding: 15px 0;
+                font-size: 1.1em;
+            }
+            .mini-btn, .mini-btn2 {
+                padding: 10px 20px;
+                font-size: 0.9em;
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+                max-width: 250px;
+            }
+            .button-container {
+                margin: 20px 0;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .title {
+                font-size: 1.5em;
+            }
+            .logo-container img {
+                height: 60px;
+            }
+            .download-btn {
+                width: 220px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -140,9 +256,10 @@
         </div>
     </div>
 
-    <div style="text-align:center; margin-top:30px;">
+    <div class="button-container">
         <a href="comme.html" class="mini-btn">Click here to continue →</a>
         <a href="win11.html" class="mini-btn2">Click here to return</a>
     </div>
 </body>
 </html>
+
