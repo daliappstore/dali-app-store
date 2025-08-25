@@ -14,21 +14,36 @@
       color: #fff;
     }
 
-    .logo-container {
+    /* ===== Logo ===== */
+    .logo {
       text-align: center;
-      padding: 20px 0 10px 0;
+      margin: 20px 0;
     }
 
-    .logo-container img {
-      height: 70px;
+    .logo img {
+      width: 150px;   /* الحجم في PC */
       max-width: 90%;
+      height: auto;
       transition: transform 0.2s ease;
     }
 
-    .logo-container img:hover {
+    .logo img:hover {
       transform: scale(1.05);
     }
 
+    @media (max-width: 768px) {
+      .logo img {
+        width: 120px; /* في التابلت */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        width: 90px;  /* في الموبايل */
+      }
+    }
+
+    /* ===== Content Box ===== */
     .content-box {
       background: rgba(0, 0, 0, 0.75);
       max-width: 900px;
@@ -116,6 +131,7 @@
       transition: background 0.3s, transform 0.2s;
     }
 
+    /* ===== Responsive Text ===== */
     @media (max-width: 768px) {
       .title {
         font-size: 1.8em;
@@ -133,10 +149,6 @@
       p, ul {
         font-size: 1em;
       }
-
-      .logo-container img {
-        height: 60px;
-      }
     }
 
     @media (max-width: 480px) {
@@ -152,104 +164,35 @@
         font-size: 1em;
         padding: 12px;
       }
+    }
 
-    
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-  margin: 20px 0;
-}
+    /* ===== Video Container ===== */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+      margin: 20px 0;
+    }
 
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-   logo {
-  width: 120px;       /* حجم ثابت في PC */
-  height: auto;       /* يحافظ على الشكل */
-  margin-bottom: 24px;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 90px;      /* نصغرها في الموبايل */
-  }
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
   </style>
 </head>
 <body>
+  <!-- ===== Logo ===== -->
   <div class="logo">
     <a href="index.html">
       <img src="logo.png" alt="Dali App Store Logo">
     </a>
   </div>
 
-  <div class="content-box">
-    <h1 class="title">Download Grand Theft Auto: San Andreas Free</h1>
-    <h2>1. Instructions</h2>
-    <p><strong>GTA: San Andreas</strong> is a legendary open-world action-adventure game set in the fictional state of San Andreas.</p>
-    <ul>
-      <li><strong>Los Santos</strong> (Los Angeles)</li>
-      <li><strong>San Fierro</strong> (San Francisco)</li>
-      <li><strong>Las Venturas</strong> (Las Vegas)</li>
-    </ul>
 
-    <h3>Key Gameplay Features</h3>
-    <ul>
-      <li>✅ Massive Open World</li>
-      <li>✅ RPG Elements</li>
-      <li>✅ Vehicles Galore</li>
-      <li>✅ Gang Warfare</li>
-      <li>✅ Mini-Games & Side Activities</li>
-      <li>✅ Deep Storyline</li>
-      <li>✅ Legendary Soundtrack</li>
-    </ul>
-
-    <img src="game sa 1.jpg" alt="GTA San Andreas">
-    <img src="game sa 2.jpg" alt="GTA San Andreas">
-    <img src="game sa 3.webp" alt="GTA San Andreas">
-
-    <h4>2. Download</h4>
-    <ul>
-      <li>Click the download button below.</li>
-      <li>Open the ISO file.</li>
-      <li>Run the setup and follow the instructions.</li>
-      <li>Enjoy the game—virus free!</li>
-    </ul>
-
-   <div class="video-container">
-  <video src="2025-08-06 11-52-57.mkv" controls></video>
-</div>
-
-    <a href="https://archive.org/details/gta-san-andreas-pc_202204" class="download-btn">Download GTA San Andreas Now</a>
-
-    <p class="size">Full Game Size: 5 GB</p>
-
-    <p>Note: after downloading, follow these steps:</p>
-    <ul>
-      <li>Download this file.</li>
-      <li>Put it in the game folder.</li>
-      <li>Agree to replace.</li>
-    </ul>
-
-   <div class="video-container">
-  <video src="2025-08-06 15-55-33.mp4" controls></video>
-</div>
-    <a href="the file runer.zip" download class="download-btn">Click here to Download this file</a>
-
-    <div class="footer">&copy; 2025 Dali App Store.</div>
-  </div>
-
-  <div class="next">
-    <a href="index3.html" class="mini-btn">Click here to continue →</a>
-    <a href="index2.html" class="mini-btn2">Click here to return</a>
-  </div>
-</body>
-</html>
