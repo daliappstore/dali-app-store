@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download Grand Theft Auto San Andreas Free</title>
-  <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
   <style>
     body {
       background-image: url("gta sa back.png");
@@ -13,8 +12,6 @@
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
       color: #fff;
-      background-attachment: fixed;
-      min-height: 100vh;
     }
 
     .logo-container {
@@ -49,7 +46,7 @@
       font-size: 2.2em;
       margin-top: 20px;
       text-shadow: 2px 2px 8px #000a;
-      font-family: 'Pricedown', Arial, sans-serif;
+      font-family: Pricedown, sans-serif;
     }
 
     p, ul, h2, h3, h4 {
@@ -72,15 +69,9 @@
       font-size: 1.1em;
       border-radius: 8px;
       box-shadow: 0 2px 12px rgba(32, 160, 0, 0.79);
-      transition: all 0.3s ease;
     }
 
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(32, 200, 0, 0.9);
-    }
-
-    img {
+    img, video {
       width: 100%;
       max-width: 600px;
       display: block;
@@ -122,38 +113,7 @@
       font-weight: 600;
       margin: 5px;
       box-shadow: 0 2px 8px 0 rgba(23,138,214,0.18);
-      transition: all 0.3s;
-    }
-
-    .mini-btn2 {
-      background: linear-gradient(90deg, #6c757d 0%, #495057 100%);
-    }
-
-    .mini-btn:hover, .mini-btn2:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-      margin: 20px 0;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      transition: background 0.3s, transform 0.2s;
     }
 
     @media (max-width: 768px) {
@@ -193,15 +153,39 @@
         padding: 12px;
       }
 
-      .logo-container img {
-        width: 90px;
-        height: auto;
-      }
-    }
+    
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+   logo {
+  width: 120px;       /* حجم ثابت في PC */
+  height: auto;       /* يحافظ على الشكل */
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 90px;      /* نصغرها في الموبايل */
+  }
+
   </style>
 </head>
 <body>
-  <div class="logo-container">
+  <div class="logo">
     <a href="index.html">
       <img src="logo.png" alt="Dali App Store Logo">
     </a>
@@ -240,12 +224,9 @@
       <li>Enjoy the game—virus free!</li>
     </ul>
 
-    <div class="video-container">
-      <video controls poster="video-poster.jpg">
-        <source src="2025-08-06 11-52-57.mkv" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+   <div class="video-container">
+  <video src="2025-08-06 11-52-57.mkv" controls></video>
+</div>
 
     <a href="https://archive.org/details/gta-san-andreas-pc_202204" class="download-btn">Download GTA San Andreas Now</a>
 
@@ -258,13 +239,9 @@
       <li>Agree to replace.</li>
     </ul>
 
-    <div class="video-container">
-      <video controls poster="video-poster2.jpg">
-        <source src="2025-08-06 15-55-33.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    
+   <div class="video-container">
+  <video src="2025-08-06 15-55-33.mp4" controls></video>
+</div>
     <a href="the file runer.zip" download class="download-btn">Click here to Download this file</a>
 
     <div class="footer">&copy; 2025 Dali App Store.</div>
