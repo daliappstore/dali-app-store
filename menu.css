@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+     background: radial-gradient(circle at top, #111 0%, #000 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+.brand-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .brand-card {
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            width: 180px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(13, 174, 196, 0.8);
+            background: rgba(30, 30, 30, 0.95);
+        }
+        
+        .brand-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            object-fit: contain;
+            aspect-ratio: 1;
+        }
+        
+        .brand-name {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .instruction {
+            margin: 30px 0;
+            color: #bbbbbb;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 1024px) {
+            .brand-card {
+                width: 160px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .brand-card {
+                width: 140px;
+                padding: 12px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .instruction {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .brand-logos {
+                gap: 15px;
+            }
+            
+            .brand-card {
+                width: 130px;
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+            
+            .brand-name {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand-logos {
+                gap: 10px;
+            }
+            
+            .brand-card {
+                width: calc(50% - 20px);
+                max-width: 140px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .instruction {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .brand-card {
+                width: 100%;
+                max-width: 160px;
+            }
+            
+            .brand-logos {
+                gap: 20px;
+            }
+        }
+        
+        /* Animation for page load */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .brand-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .brand-card:nth-child(1) { animation-delay: 0.1s; }
+        .brand-card:nth-child(2) { animation-delay: 0.2s; }
+        .brand-card:nth-child(3) { animation-delay: 0.3s; }
+        .brand-card:nth-child(4) { animation-delay: 0.4s; }
+        .brand-card:nth-child(5) { animation-delay: 0.5s; }
+
+         .logo {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .logo img {
+      width: 150px;   /* الحجم في PC */
+      max-width: 90%;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .logo img {
+        width: 120px; /* في التابلت */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        width: 90px;  /* في الموبايل */
+      }
+    }
