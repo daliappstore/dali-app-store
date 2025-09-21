@@ -1,0 +1,38 @@
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background:black;
+      color: white;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: black;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    h2 {
+      margin-top: 24px;
+      font-size: 22px;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+    }
