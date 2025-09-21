@@ -1,0 +1,128 @@
+* {
+    margin: 5px;;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background-image:url("ubunto\ darck.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 18px;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px; /* Space for footer */
+    font-family: 'Ubuntu', sans-serif; 
+}
+ .logo-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+  }
+  .logo-container img {
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  .logo-container img:hover { transform: scale(1.1); }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 20px 50px 20px;
+    text-align: center;
+  }
+  .intro, li {
+    font-size: 18px;
+    color: #ddf0e0; /* Soft green/blue text */
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding: 20px 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    background: rgba(240, 85, 13, 0.897); /* light blue overlay */
+    border-radius: 12px;
+  }
+
+  li { text-align: left; margin-bottom: 10px; }
+
+  .screenshot {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+  .screenshot:hover { transform: scale(1.03); }
+
+  video {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+  }
+
+  .download-btn, .mini-btn {
+    display: inline-block;
+    margin: 30px auto 0 auto;
+    padding: 18px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  }
+
+  .download-btn {
+    background: linear-gradient(90deg, #d68a17, #0d1103); 
+    color: #fff;
+    font-size: 1.3em;
+  }
+  .download-btn:hover {
+    background: linear-gradient(90deg, #c76d07, #000000);
+    transform: scale(1.05);
+  }
+
+  .mini-btn {
+    background: linear-gradient(90deg, #ff7300, #010e07); 
+    color: #000;
+    font-size: 1em;
+  }
+  .mini-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #df5017, #ff5e00d5);
+  }
+
+  .size {
+    font-size: 1.2em;
+    color: #13c5b6d7;
+    margin-top: 15px;
+  }
+
+  .footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #cfe8e8;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    .intro, li { font-size: 16px; }
+    .download-btn, .mini-btn { width: 90%; }
+  }
