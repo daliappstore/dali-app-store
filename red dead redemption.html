@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -6,12 +6,11 @@
   <title>Red Dead Redemption - Dali App Store</title>
   <meta name="description" content="Red Dead Redemption: Open-world action-adventure set in the American Old West. System requirements, screenshots, and download for PC/Console." />
   <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="stylesheet" href="red dead redemption.css" />
 </head>
 <body>
   <div class="container">
     <!-- Header with logo -->
-    <header class="logo-container" role="banner">
+    <header>
       <a href="index.html" aria-label="Back to Dali App Store home">
         <img src="logo.png" alt="Dali App Store Logo" width="72" height="72" />
       </a>
@@ -20,15 +19,15 @@
     <main id="main-content" tabindex="-1">
       <!-- Title -->
       <h1>Red Dead Redemption</h1>
-      <p class="meta" aria-label="Platform, genre, and release">
-        <span>Platform: PC / Console</span> &middot; 
-        <span>Genre: Action-adventure</span> &middot; 
+      <p>
+        <span>Platform: PC / Console</span> · 
+        <span>Genre: Action-adventure</span> · 
         <span>Release: Original</span>
       </p>
 
       <!-- Description -->
-      <section aria-labelledby="desc-heading">
-        <h2 id="desc-heading" class="visually-hidden">Game Description</h2>
+      <section>
+        <h2>Game Description</h2>
         <p>
           <strong>Red Dead Redemption</strong> is an open-world action-adventure game set in the final years of the American Old West.
           Explore a vast landscape, complete story missions, and engage in dynamic world encounters.
@@ -36,15 +35,16 @@
       </section>
 
       <!-- Screenshots -->
-      <section class="screenshots" aria-label="Game Screenshots">
-        <img class="screenshot" src="rdr1-1.jpg" alt="Horseback riding in the wild west, Red Dead Redemption" />
-        <img class="screenshot" src="rdr1-2.webp" alt="Intense gunfight scene in Red Dead Redemption" />
-        <img class="screenshot" src="rdr1-3.jpg" alt="Sunset over the plains in Red Dead Redemption" />
+      <section>
+        <h2>Screenshots</h2>
+        <img src="rdr1-1.jpg" alt="Horseback riding in the wild west, Red Dead Redemption" />
+        <img src="rdr1-2.webp" alt="Intense gunfight scene in Red Dead Redemption" />
+        <img src="rdr1-3.jpg" alt="Sunset over the plains in Red Dead Redemption" />
       </section>
 
       <!-- Requirements -->
-      <section aria-labelledby="requirements-heading">
-        <h2 id="requirements-heading">System Notes &amp; Requirements</h2>
+      <section>
+        <h2>System Notes & Requirements</h2>
         <ul>
           <li><strong>OS:</strong> Windows 7/8/10 (64-bit) or console</li>
           <li><strong>CPU:</strong> Dual-core 2.6 GHz or better</li>
@@ -54,17 +54,17 @@
         </ul>
       </section>
 
-      <!-- Download / Install (Windows only) -->
-      <section aria-labelledby="install-heading">
-        <h2 id="install-heading">How to Install (Windows)</h2>
+      <!-- Install -->
+      <section>
+        <h2>How to Install (Windows)</h2>
         <p>Follow these Windows-specific steps to install from the ISO:</p>
         <ol>
           <li>Download the ISO file by clicking the <strong>Download / Install</strong> button below.</li>
           <li>
             Mount and install:
             <ul>
-              <li>On Windows 8/10/11, right-click the ISO file and choose <strong>Mount</strong>. A new virtual drive will appear in File Explorer.</li>
-              <li>Open the virtual drive and run <code>setup.exe</code> or the provided installer to begin installation.</li>
+              <li>On Windows 8/10/11, right-click the ISO file and choose <strong>Mount</strong>.</li>
+              <li>Open the virtual drive and run <code>setup.exe</code> or the installer.</li>
             </ul>
           </li>
           <li>Follow the on-screen prompts to complete installation.</li>
@@ -73,35 +73,20 @@
         </ol>
       </section>
 
-      <!-- Buttons and Footer -->
-      <div class="button-container">
-        <a class="download-btn" href="https://archive.org/details/red-dead-redemption-1" target="_blank" rel="noopener noreferrer" aria-label="Download Red Dead Redemption ISO (15 GB)">Download</a>
-        <div class="size-note">ISO file size: 15 GB</div>
+      <!-- Download -->
+      <div>
+        <a href="https://archive.org/details/red-dead-redemption-1" target="_blank" rel="noopener noreferrer">Download</a>
+        <p>ISO file size: 15 GB</p>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer role="contentinfo">
-      <nav class="mini-btn" aria-label="Page navigation">
-        <a class="back" href="menu.html">← Return to Menu</a>
+    <footer>
+      <nav>
+        <a href="menu.html">← Return to Menu</a>
       </nav>
-      <div class="footer">
-        &copy; Dali App Store
-      </div>
+      <p>&copy; Dali App Store</p>
     </footer>
   </div>
-
-  <!-- Visually hidden class for accessibility purposes -->
-  <style>
-    .visually-hidden {
-      position: absolute;
-      width: 1px; height: 1px;
-      padding: 0; margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-  </style>
 </body>
 </html>
-
