@@ -1,0 +1,53 @@
+.game-kart {
+  background: rgba(20, 20, 60, 0.7);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  transition: transform 200ms ease;
+}
+.game-kart:hover {
+  transform: scale(1.03);
+}
+
+.game-cover {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
+}
+
+.game-title {
+  font-size: 1.3rem;
+  color: #80deea;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #00e5ff, #6200ea);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+.download-btn:active {
+  transform: scale(0.98);
+}
+body {
+  background-color: black ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
