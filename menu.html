@@ -1,190 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dali App Store</title>
-    <link rel="stylesheet" href="menu.css" />
-    <link rel="icon" type="image/x-icon" href="logo.png" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dali App Store</title>
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="icon" type="image/x-icon" href="logo.png" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <a href="index.html">
-            <img src="logo.png" alt="Dali App Store Logo" />
-          </a>
-          <h1>Dali App Store</h1>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="Dali App Store Logo" />
+        </a>
+        <h1>Dali App Store</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="container">
+    <div class="hero">
+      <h2>Discover Amazing Apps</h2>
+      <p>Explore our curated collection of premium applications designed to enhance your digital experience.</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchBar" class="search-input" placeholder="Search apps..." />
+    </div>
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="category-btn active" data-category="all">All Apps</button>
+      <button class="category-btn" data-category="games">Games</button>
+      <button class="category-btn" data-category="productivity">Productivity</button>
+      <button class="category-btn" data-category="tools">Tools</button>
+      <button class="category-btn" data-category="software">Software</button>
+      <button class="category-btn" data-category="emulator">Emulator</button>
+    </div>
+
+    <!-- Apps Grid -->
+    <div class="apps-grid" id="appsGrid">
+      <!-- App Cards -->
+      <div class="app-card" data-category="games" data-name="blur privacy browser extension">
+        <img src="Blur_0.ico" alt="Blur App" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Blur</h3>
+          <p class="app-description">Privacy-focused browser extension that blocks trackers and hides your data from advertisers.</p>
+          <a href="index1.html" class="app-link">Download</a>
         </div>
       </div>
-    </header>
 
-    <div class="container">
-      <div class="hero">
-        <h2>Discover Amazing Apps</h2>
-        <p>
-          Explore our curated collection of premium applications designed to
-          enhance your digital experience.
-        </p>
+      <div class="app-card" data-category="games" data-name="grand theft auto san andreas gta">
+        <img src="app.ico" alt="GTA San Andreas" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Grand Theft Auto: San Andreas</h3>
+          <p class="app-description">The iconic open-world action game set in the early 90s California-inspired state.</p>
+          <a href="index2.html" class="app-link">Download</a>
+        </div>
       </div>
 
-      <div class="search-container">
-        <i class="fas fa-search search-icon"></i>
-        <input
-          type="text"
-          id="searchBar"
-          class="search-input"
-          placeholder="Search apps..."
-        />
+      <div class="app-card" data-category="productivity" data-name="visual studio code vscode editor">
+        <img src="download.jpg" alt="Visual Studio Code" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Visual Studio Code</h3>
+          <p class="app-description">Free source-code editor made by Microsoft for Windows, Linux and macOS.</p>
+          <a href="index3.html" class="app-link">Download</a>
+        </div>
       </div>
 
-      <div class="category-filter">
-        <button class="category-btn active" data-category="all">
-          All Apps
-        </button>
-        <button class="category-btn" data-category="games">Games</button>
-        <button class="category-btn" data-category="productivity">
-          Productivity
-        </button>
-        <button class="category-btn" data-category="tools">Tools</button>
-        <button class="category-btn" data-category="software">Software</button>
-         <button class="category-btn" data-category="emulator">emulator</button>
+      <div class="app-card" data-category="software" data-name="windows 11 win11">
+        <img src="win11.png" alt="Windows 11" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Windows 11</h3>
+          <p class="app-description">The latest major release of Microsoft's Windows NT operating system.</p>
+          <a href="win11.html" class="app-link">Download</a>
+        </div>
       </div>
 
-      <div class="apps-grid" id="appsGrid">
-        <!-- Blur -->
-        <div class="app-card" data-category="games" data-name="blur">
-          <img src="Blur_0.ico" alt="Blur App" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">Blur</h3>
-            <p class="app-description">
-              Privacy-focused browser extension that blocks trackers and hides
-              your data from advertisers.
-            </p>
-            <a href="index1.html" class="app-link">Download</a>
-          </div>
+      <div class="app-card" data-category="games" data-name="roblox game creation platform">
+        <img src="download2.png" alt="Roblox" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Roblox</h3>
+          <p class="app-description">Online game platform and game creation system that allows users to program games.</p>
+          <a href="rob.html" class="app-link">Download</a>
         </div>
+      </div>
 
-        <!-- GTA San Andreas -->
-        <div
-          class="app-card"
-          data-category="games"
-          data-name="grand theft auto san andreas"
-        >
-          <img src="app.ico" alt="GTA San Andreas" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">Grand Theft Auto: San Andreas</h3>
-            <p class="app-description">
-              The iconic open-world action game set in the early 90s
-              California-inspired state.
-            </p>
-            <a href="index2.html" class="app-link">Download</a>
-          </div>
+      <div class="app-card" data-category="software" data-name="ubuntu linux operating system">
+        <img src="ubuntu.png" alt="Ubuntu" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Ubuntu</h3>
+          <p class="app-description">Ubuntu is the world’s favourite Linux operating system. Run it on your laptop, workstation, server or IoT device.</p>
+          <a href="ubuntu.html" class="app-link">Download</a>
         </div>
+      </div>
 
-        <!-- Visual Studio Code -->
-        <div
-          class="app-card"
-          data-category="productivity"
-          data-name="visual studio code"
-        >
-          <img src="download.jpg" alt="Visual Studio Code" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">Visual Studio Code</h3>
-            <p class="app-description">
-              Free source-code editor made by Microsoft for Windows, Linux and
-              macOS.
-            </p>
-            <a href="index3.html" class="app-link">Download</a>
-          </div>
+      <div class="app-card" data-category="games" data-name="red dead redemption rdr2">
+        <img src="red dead redemption.jpg" alt="Red Dead Redemption" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">Red Dead Redemption</h3>
+          <p class="app-description">An epic tale of life in America at the dawn of the modern age.</p>
+          <a href="red dead redemption.html" class="app-link">Download</a>
         </div>
+      </div>
 
-        <!-- Windows 11 -->
-        <div class="app-card" data-category="software" data-name="win11">
-          <img src="win11.png" alt="Windows 11" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">Windows 11</h3>
-            <p class="app-description">
-              The latest major release of Microsoft's Windows NT operating
-              system.
-            </p>
-            <a href="win11.html" class="app-link">Download</a>
+      <div class="app-card" data-category="emulator" data-name="ps2-emulator playstation2 pcsx2">
+        <img src="ps2.jpg" alt="Screenshot of PlayStation 2 Emulator interface" class="app-image" />
+        <div class="app-content">
+          <h3 class="app-name">PlayStation 2 Emulator</h3>
+          <p class="app-description">
+            Emulate classic PS2 games on your PC. Features include save states, controller mapping,
+            upscaling, and shader support for enhanced visuals. Requires legally owned game ISOs
+            and BIOS files to function.
+          </p>
+          <div class="app-tags">
+            <span class="tag">Save States</span>
+            <span class="tag">Upscaling</span>
+            <span class="tag">Controller Support</span>
+            <span class="tag">Shaders</span>
           </div>
-        </div>
-
-        <!-- Roblox -->
-        <div class="app-card" data-category="games" data-name="roblox">
-          <img src="download2.png" alt="Roblox" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">Roblox</h3>
-            <p class="app-description">
-              Online game platform and game creation system that allows users to
-              program games.
-            </p>
-            <a href="rob.html" class="app-link">Download</a>
-          </div>
-        </div>
-
-        <!-- ubuntu -->
-        <div class="app-card" data-category="software" data-name="ubuntu">
-          <img src="ubuntu.png" alt="Ubuntu" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">Ubuntu</h3>
-            <p class="app-description">
-              Ubuntu is the world’s favourite Linux operating system. Run it on
-              your laptop, workstation, server or IoT device, with five years of
-              free security updates.
-            </p>
-            <a href="ubuntu.html" class="app-link">Download</a>
-          </div>
-        </div>
-
-        <!-- red dead redemption -->
-        <div class="app-card" data-category="games" data-name="red dead redemption">
-          <img
-            src="red dead redemption.jpg"
-            alt="Red Dead Redemption"
-            class="app-image"
-          />
-          <div class="app-content">
-            <h3 class="app-name">Red Dead Redemption</h3>
-            <p class="app-description">
-              An epic tale of life in America at the dawn of the modern age.
-            </p>
-            <a href="red dead redemption.html" class="app-link">Download</a>
-          </div>
-        </div>
-
-        <!-- PlayStation 2 emulator -->
-        <div class="app-card" data-category="emulator" data-name="ps2-emulator">
-          <img src="ps2.jpg" alt="PS2 Emulator" class="app-image" />
-          <div class="app-content">
-            <h3 class="app-name">PlayStation 2 Emulator</h3>
-            <p class="app-description">
-              Emulate classic PS2 games on your PC. Features save states, controller mapping,
-              upscaling and shader support for improved visuals. Requires legally owned game ISOs
-              and BIOS files to function.
-            </p>
-            <a href="ps2 emulator" class="app-link">Download</a>
-          </div>
+          <a href="https://example.com/ps2-emulator-download" class="app-link" target="_blank" rel="noopener">Download</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <div class="container footer-content">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-        <div class="copyright">
-          &copy; 2025 Dali App Store. All rights reserved.
-        </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="copyright">
+        &copy; 2025 Dali App Store. All rights reserved.
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="recheche.js"></script>
-  </body>
+  <!-- Search & Filter Script -->
+  <script src="recheche.js"></script>
+</body>
 </html>
-
