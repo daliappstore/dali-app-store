@@ -1,125 +1,90 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchBar');
-    const appsGrid = document.getElementById('appsGrid');
-    const categoryButtons = document.querySelectorAll('.category-btn');
+ocument.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchBar');
+  const appsGrid = document.getElementById('appsGrid');
+  const categoryButtons = document.querySelectorAll('.category-btn');
 
-    function getAppCards() {
-        return appsGrid.querySelectorAll('.app-card');
-    }
+  const getAppCards = () => appsGrid.querySelectorAll('.app-card');
 
-    function escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
+  const escapeRegExp = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    // ===== Helper to remove highlights and restore original text =====
-    function removeHighlights() {
-        const appCards = getAppCards();
-        appCards.forEach(card => {
-            const nameElement = card.querySelector('.app-name');
-            const descElement = card.querySelector('.app-description');
-            if (nameElement && nameElement.getAttribute('data-original')) {
-                nameElement.textContent = nameElement.getAttribute('data-original');
-                nameElement.removeAttribute('data-original');
-            }
-            if (descElement && descElement.getAttribute('data-original')) {
-                descElement.textContent = descElement.getAttribute('data-original');
-                descElement.removeAttribute('data-original');
-            }
-        });
-    }
-
-    // ===== No results helper =====
-    function showNoResults(show) {
-        let noResults = appsGrid.querySelector('.no-results');
-        if (show) {
-            if (!noResults) {
-                noResults = document.createElement('div');
-                noResults.className = 'no-results';
-                noResults.innerHTML = `
-                    <i class="fas fa-search"></i>
-                    <h3>No apps found</h3>
-                    <p>Try different search terms or browse categories</p>
-                `;
-                appsGrid.appendChild(noResults);
-            }
-        } else if (noResults) {
-            noResults.remove();
+  const removeHighlights = () => {
+    getAppCards().forEach(card => {
+      ['.app-name', '.app-description'].forEach(selector => {
+        const el = card.querySelector(selector);
+        if (el?.dataset.original) {
+          el.textContent = el.dataset.original;
+          delete el.dataset.original;
         }
+      });
+    });
+  };
+
+  const showNoResults = show => {
+    let noResults = appsGrid.querySelector('.no-results');
+    if (show && !noResults) {
+      noResults = document.createElement('div');
+      noResults.className = 'no-results';
+      noResults.innerHTML = `
+        <i class="fas fa-search"></i>
+        <h3>No apps found</h3>
+        <p>Try different search terms or browse categories</p>
+      `;
+      appsGrid.appendChild(noResults);
+    } else if (!show && noResults) {
+      noResults.remove();
     }
+  };
 
-    // ===== Search Functionality =====
-    searchInput.addEventListener('input', function() {
-        const rawTerm = this.value.trim();
-        const searchTerm = rawTerm.toLowerCase();
-        let hasVisibleResults = false;
+  const highlightText = (el, regex) => {
+    if (!el) return;
+    const original = el.dataset.original || el.textContent;
+    el.dataset.original = original;
+    el.innerHTML = original.replace(regex, match => `<span class="highlight">${match}</span>`);
+  };
 
-        // always restore original text before applying new highlights
-        removeHighlights();
+  searchInput.addEventListener('input', () => {
+    const term = searchInput.value.trim().toLowerCase();
+    const regex = term ? new RegExp(escapeRegExp(term), 'gi') : null;
+    let hasResults = false;
 
-        const appCards = getAppCards();
-        const regex = searchTerm ? new RegExp(escapeRegExp(searchTerm), 'gi') : null;
+    removeHighlights();
 
-        appCards.forEach(card => {
-            const dataName = (card.getAttribute('data-name') || '').toLowerCase();
-            const nameEl = card.querySelector('.app-name');
-            const descEl = card.querySelector('.app-description');
-            const appDescText = descEl ? descEl.textContent.toLowerCase() : '';
+    getAppCards().forEach(card => {
+      const dataName = card.getAttribute('data-name')?.toLowerCase() || '';
+      const appNameText = card.querySelector('.app-name')?.textContent.toLowerCase() || '';
+      const appDescText = card.querySelector('.app-description')?.textContent.toLowerCase() || '';
 
-            if (dataName.includes(searchTerm) || appDescText.includes(searchTerm)) {
-                card.style.display = 'flex';
-                hasVisibleResults = true;
-
-                // Highlight matching text only when there's a non-empty search term
-                if (searchTerm && regex) {
-                    const originalName = nameEl ? (nameEl.getAttribute('data-original') || nameEl.textContent) : '';
-                    const originalDesc = descEl ? (descEl.getAttribute('data-original') || descEl.textContent) : '';
-
-                    if (nameEl) {
-                        nameEl.setAttribute('data-original', originalName);
-                        nameEl.innerHTML = originalName.replace(regex, match => `<span class="highlight">${match}</span>`);
-                    }
-                    if (descEl) {
-                        descEl.setAttribute('data-original', originalDesc);
-                        descEl.innerHTML = originalDesc.replace(regex, match => `<span class="highlight">${match}</span>`);
-                    }
-                }
-            } else {
-                card.style.display = 'none';
-            }
-        });
-
-        showNoResults(!hasVisibleResults);
-
-        // if search is cleared, ensure originals are restored (and remove no-results)
-        if (!searchTerm) {
-            removeHighlights();
-            showNoResults(false);
+      const match = dataName.includes(term) || appNameText.includes(term) || appDescText.includes(term);
+      card.style.display = match ? 'flex' : 'none';
+      if (match) {
+        hasResults = true;
+        if (regex) {
+          highlightText(card.querySelector('.app-name'), regex);
+          highlightText(card.querySelector('.app-description'), regex);
         }
+      }
     });
 
-    // ===== Category Filter =====
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
+    showNoResults(!hasResults);
+    if (!term) removeHighlights();
+  });
 
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.dataset.category;
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
 
-            const appCards = getAppCards();
-            appCards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+      getAppCards().forEach(card => {
+        const match = category === 'all' || card.dataset.category === category;
+        card.style.display = match ? 'flex' : 'none';
+      });
 
-            // Clear search input, restore originals, and remove no-results
-            searchInput.value = '';
-            removeHighlights();
-            showNoResults(false);
-        });
+      searchInput.value = '';
+      removeHighlights();
+      showNoResults(false);
     });
+  });
 });
 
 
