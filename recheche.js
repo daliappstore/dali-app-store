@@ -1,4 +1,4 @@
-ocument.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchBar');
   const appsGrid = document.getElementById('appsGrid');
   const categoryButtons = document.querySelectorAll('.category-btn');
@@ -86,5 +86,7 @@ ocument.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
 
 
