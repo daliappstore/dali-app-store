@@ -1,0 +1,261 @@
+/* ===== Global Styles ===== */
+body {
+  background-image: url("nfsmostwanted\(2005\)\ .png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Logo ===== */
+/* ===== Logo (Right Aligned) ===== */
+.logo {
+  text-align: right;
+  margin: 20px 25px 20px 0;
+}
+
+.logo img {
+  width: 150px;
+  max-width: 90%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 90px;
+  }
+}
+
+/* ===== Content Box ===== */
+.content-box {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.952);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 32px 25px;
+  transition: box-shadow 0.3s;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Title ===== */
+.title {
+  text-align: center;
+  background: linear-gradient(90deg, #adadad 0%, #01070e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.4em;
+  margin-top: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.667);
+  font-family: Pricedown, sans-serif;
+  letter-spacing: 2px;
+  transition: text-shadow 0.3s;
+}
+
+.title:hover {
+  text-shadow: 0 0 12px #000000;
+}
+
+/* ===== Typography ===== */
+p, ul, h2, h3, h4 {
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* ===== Download Button ===== */
+.download-btn {
+  display: block;
+  max-width: 280px;
+  margin: 25px auto;
+  padding: 15px;
+  background: linear-gradient(90deg, #615d5d 0%, #090e13 100%);
+  color: #0f0c16;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.15em;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgb(255, 255, 255);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, #0a0e13 0%, #ffffff 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 24px rgb(255, 255, 255);
+}
+
+.download-btn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ===== Media Elements ===== */
+img, video {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+img:hover, video:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transform: scale(1.03);
+}
+
+/* ===== Video Container ===== */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Size Label ===== */
+.size {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #eee;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* ===== Navigation Buttons ===== */
+.next {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.mini-btn, .mini-btn2 {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #ffffff 0%, #1e90ff 100%);
+  color: #1e90ff;
+  font-size: 1em;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 5px;
+  box-shadow: 0 2px 8px 0 rgba(0,102,204,0.18);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.mini-btn:hover, .mini-btn2:hover {
+  background: linear-gradient(90deg, #1e90ff 0%, #ffffff 100%);
+  transform: scale(1.07);
+}
+
+.mini-btn:focus, .mini-btn2:focus {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ===== Responsive Text ===== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8em;
+  }
+
+  .content-box {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .download-btn {
+    width: 90%;
+  }
+
+  p, ul {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  p, ul {
+    font-size: 0.95em;
+  }
+
+  .download-btn {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#1d1616, #0f0e0f);
+  border-radius: 4px;
+}
